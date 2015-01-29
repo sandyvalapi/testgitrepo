@@ -2,6 +2,8 @@
     Document   : goodTL
     Created on : Nov 18, 2014, 3:16:21 PM
     Author     : svalapi
+
+thanks
 --%>
 
 <%@page contentType="text/html"%>
