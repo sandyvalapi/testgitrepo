@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/svalapi/Documents/NetBeansProjects/Coordinator/src/java/com/coord/src/UpdateEditedUserSchedule.java</file>
+            <file>file:/C:/Users/svalapi/Documents/NetBeansProjects/Coordinator/web/viewTLCalender.jsp</file>
+            <file>file:/C:/Users/svalapi/Documents/NetBeansProjects/Coordinator/web/scheduleTLcalender.jsp</file>
+            <file>file:/C:/Users/svalapi/Documents/NetBeansProjects/Coordinator/src/java/com/coord/src/LoginFormAction.java</file>
+            <file>file:/C:/Users/svalapi/Documents/NetBeansProjects/Coordinator/src/java/com/coord/src/EditUserSchedule.java</file>
+            <file>file:/C:/Users/svalapi/Documents/NetBeansProjects/Coordinator/src/java/com/coord/bo/ScheduleMeetingBean.java</file>
+            <file>file:/C:/Users/svalapi/Documents/NetBeansProjects/Coordinator/src/java/com/coord/src/DeleteUserSchedule.java</file>
+            <file>file:/C:/Users/svalapi/Documents/NetBeansProjects/Coordinator/web/scheduleMeeting.jsp</file>
+            <file>file:/C:/Users/svalapi/Documents/NetBeansProjects/Coordinator/web/WEB-INF/struts-config.xml</file>
+            <file>file:/C:/Users/svalapi/Documents/NetBeansProjects/Coordinator/src/java/com/coord/src/ScheduleMyCalenderForTL.java</file>
+            <file>file:/C:/Users/svalapi/Documents/NetBeansProjects/Coordinator/src/java/com/coord/src/ScheduleMyCalender.java</file>
+            <file>file:/C:/Users/svalapi/Documents/NetBeansProjects/Coordinator/src/java/com/coord/src/ScheduleConfirm.java</file>
+            <file>file:/C:/Users/svalapi/Documents/NetBeansProjects/Coordinator/src/java/com/coord/src/viewTLCreatedMeetings.java</file>
+            <file>file:/C:/Users/svalapi/Documents/NetBeansProjects/Coordinator/web/editUserSchedule.jsp</file>
+            <file>file:/C:/Users/svalapi/Documents/NetBeansProjects/Coordinator/src/java/com/coord/src/ViewTLCalender.java</file>
+            <file>file:/C:/Users/svalapi/Documents/NetBeansProjects/Coordinator/web/teamAvailabilityResult.jsp</file>
+        </group>
+    </open-files>
+</project-private>

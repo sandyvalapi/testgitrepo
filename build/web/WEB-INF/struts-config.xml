@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+
+<struts-config>
+    <form-beans>
+        <form-bean name="MeetingFormBean" type="com.coord.bo.MeetingFormBean"/>
+        <form-bean name="ScheduleMeetingRequestBean" type="com.coord.bo.ScheduleMeetingRequestBean"/>
+        <form-bean name="ScheduleMeetingBean" type="com.coord.bo.ScheduleMeetingBean"/>
+        <form-bean name="RegisterBean" type="com.coord.bo.RegisterBean"/>
+        <form-bean name="LoginBean" type="com.coord.bo.LoginBean"/>
+    </form-beans>
+    
+    <global-exceptions>
+    
+    </global-exceptions>
+
+    <global-forwards>
+        <forward name="welcome"  path="/Welcome.do"/>
+         
+    </global-forwards>
+
+    <action-mappings>
+        <action input="/login.jsp" name="LoginBean" path="/login" scope="session" type="com.coord.src.LoginFormAction">
+            <forward name="goodAdmin" path="/goodAdmin.jsp"/>
+            <forward name="goodTL" path="/goodTL.jsp"/>
+            <forward name="goodTM" path="/goodTM.jsp"/>
+            <forward name="login" path="/login.jsp"/>
+        </action>
+        <action input="/" name="RegisterBean" path="/register" scope="request" type="com.coord.src.RegisterFormAction">
+            <forward name="successregistration" path="/goodAdmin.jsp"/>
+            
+        </action>
+        
+        <action path="/logout" type="com.coord.src.LogoutFormAction">
+            <forward name="success" path="/login.jsp"/>
+        </action>
+        <action input="/" name="RegisterBean" path="/viewMyTeam" scope="request" type="com.coord.src.ViewMyTeam">
+            <forward name="getTeamList" path="/getTeamListForTl.jsp"/>
+        </action>
+        <action input="/" name="ScheduleMeetingBean" path="/scheduleMyCalender" scope="request" type="com.coord.src.ScheduleMyCalender">
+            <forward name="success" path="/goodTM.jsp"/>
+        </action>
+        <action input="/" name="ScheduleMeetingBean" path="/scheduleMyCalenderForTL" scope="request" type="com.coord.src.ScheduleMyCalenderForTL">
+            <forward name="success" path="/goodTL.jsp"/>
+        </action>
+        <action input="/" name="ScheduleMeetingRequestBean" path="/checkteamavailable" scope="request" type="com.coord.src.ScheduleTeamAvailablity">
+            <forward name="success" path="/getScheduleResult.jsp"/>
+        </action>
+        <action input="/" name="MeetingFormBean" path="/proceedToMeeting" scope="session" type="com.coord.src.ProceedToMeeting">
+            <forward name="success" path="/goodTL.jsp"/>
+        </action>
+        <action input="/" name="MeetingFormBean" path="/checkMeetingFreeTime" scope="request" type="com.coord.src.CheckMeetingFreeTime">
+            <forward name="success" path="/teamAvailabilityResult.jsp"/>
+        </action>
+        <action input="/" name="ScheduleMeetingBean" path="/viewTLCalender" scope="request" type="com.coord.src.ViewTLCalender">
+            <forward name="success" path="/viewTLCalender.jsp"/>
+        </action>
+        <action path="/deleteUserSchedule" type="com.coord.src.DeleteUserSchedule">
+            <forward name="success" path="/goodTL.jsp"/>
+        </action>
+        <action path="/editUserSchedule" type="com.coord.src.EditUserSchedule">
+            <forward name="success" path="/editUserSchedule.jsp"/>
+        </action>
+        <action path="/updateEditedUserSchedule" type="com.coord.src.UpdateEditedUserSchedule">
+            <forward name="success" path="/goodTL.jsp"/>
+        </action>
+        <action path="/scheduleConfirm" type="com.coord.src.ScheduleConfirm">
+            <forward name="success" path="/scheduleMeeting.jsp"/>
+        </action>
+        <action path="/viewMyCalender" type="com.coord.src.viewMyCalender">
+            <forward name="success" path="/viewMyCalenderList.jsp"/>
+        </action>
+        <action path="/deleteUserScheduleTM" type="com.coord.src.deleteUserScheduleTM">
+            <forward name="success" path="/goodTM.jsp"/>
+        </action>
+        <action path="/editUserScheduleTM" type="com.coord.src.editUserScheduleTM">
+            <forward name="success" path="/editUserScheduleTM.jsp"/>
+        </action>
+        <action path="/updateEditedUserScheduleTM " type="com.coord.src.updateEditedUserScheduleTM">
+            <forward name="success" path="/goodTM.jsp"/>
+        </action>
+        <action path="/testser" type="com.coord.src.testser">
+            <forward name="success" path="/goodTM.jsp"/>
+        </action>
+        <action path="/viewTLCreatedMeetings" type="com.coord.src.viewTLCreatedMeetings">
+            <forward name="success" path="/viewTLCalender.jsp"/>
+        </action>
+       
+        <action path="/checkteamavailable" type="com.coord.src.Checkteamavailable"/>
+        
+        <action path="/Welcome" forward="/welcomeStruts.jsp"/>
+    </action-mappings>
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>    
+    
+     
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+  
+</struts-config>

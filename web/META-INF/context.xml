@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/Coordinator">
+    <Resource name="MSDB" type="javax.sql.DataSource"
+        driverClassName="oracle.jdbc.driver.OracleDriver"
+        username="coord" password="coord" url="jdbc:oracle:thin:@localhost:1521:XE"
+        auth="Container" maxActive="90" maxIdle="55" maxWait="3000000"/>
+</Context>
