@@ -7,6 +7,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <html:html  lang="en"> 
     <head>
+        
+        
+        
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
